@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+.driver-tab-height {
+    height: var(--driverTabHeight);
+}
+
+.overflow-none{
+    overflow:hidden;
+}
+
+.overflow-enabled{
+    overflow-y: scroll;
+}
+
+.overflow-enabled::-webkit-scrollbar{
+    display: none;
+}
+
+.img-color {
+    background-color: #614e88;
+}
+
+.text-color {
+ color : #614e88; 
+}
+
+.border-color {
+    border-color : #614e88;
+}
+.border-color-light {
+    border-color : #614e884d;
+}
+
+
+/* .opacity-7{
+    opacity: 7;
+} */
+
+
+
+.img-sign-color {
+    background-color: #B59CD6;
+}
+
+.text-sign-color {
+ color : #B59CD6; 
+}
+
+.border-sign-color {
+    border-color : #B59CD6;
+}
+
+
+.text-xxs{
+    font-size: 10px;
+}
+
+
+
+
+
+
+.booking-image{
+    background-image: url("../public/imagecar.jpeg");
+    background-size: cover;
+}
