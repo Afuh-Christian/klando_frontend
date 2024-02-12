@@ -23,16 +23,12 @@ import BookRide from './Pages/BookRide';
 function App() {
 
   const user = 
-  //  null 
-   {name: "afuh"} ; 
-
-
-
-    
-
+   null 
+  //  {name: "afuh"} 
+   ; 
   return (
     <> 
- <BrowserRouter basename = '/'>
+     <BrowserRouter basename = '/'>
       <Routes>
         {
           user?.name ? 
@@ -57,15 +53,6 @@ function App() {
          <Route path='*' element = {<Page404/>}/>
       </Routes>
     </BrowserRouter>
-    {/* <Auth_Login/>  */}
-    {/* <AppOpen/>  */}
-    {/* <Counter/> */}
-
-    {/* <Button className="bg-red-600" variant="contained">Contained</Button> */}
-
-     {/* <h1 className="text-3xl font-bold underline">
-     Hello world!
-     </h1> */}
     </>
   )
 }

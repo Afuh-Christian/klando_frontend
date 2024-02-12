@@ -1,6 +1,9 @@
 import { useFormik } from "formik"
 import FormGenerator from "../Utils/Components/FormGenerator"
-
+import { GoogleLogin } from '@react-oauth/google';
+import { jwtDecode } from 'jwt-decode';
+import { useDispatch } from 'react-redux';
+import { RegisterUser } from "../ReduxStore/AuthSlice";
 
 const formData=[
     {id: 0 , name: "name" , label: "Name" , type:"text"} , 
@@ -11,8 +14,9 @@ const formData=[
 ]
 
 function Auth_SignUp() {
+     const dispath = useDispatch() 
     const defautData = {
-        name : "" , 
+        userName : "" , 
         email : "" , 
         phoneNumber : "" , 
         password : "" , 
@@ -27,9 +31,23 @@ function Auth_SignUp() {
      <div className="w-full">
      <h1 className="text-center font-bold text-sign-color text-xl mb-3" >Signup</h1>
         <FormGenerator formData={formData} formik={formik}/>
+
+    
         </div>
+
+        <GoogleLogin
+          onSuccess={(credentialResponse) => {
+             console.log(jwtDecode(credentialResponse?.credential));
+            //console.log((credentialResponse));
+          }}
+          onError={() => {
+            console.log('Login Failed');
+          }}
+          auto_select={false}
+
+        />
     <div className="text-center ">
-        <h1 className="text-center font-bold text-color text-xl mb-3" >Continue</h1>
+        <h1 onClick={()=>{dispath(RegisterUser(formik.values))}} className="text-center font-bold text-color text-xl mb-3">Continue</h1>
         <p className="text-xs">By proceeding, you consent to get calls , whatsapp or SMS messages , included by 
             automated dialer, from klando and its affiliates. And you are Above 18 years .
         </p>
