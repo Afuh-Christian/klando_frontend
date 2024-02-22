@@ -5,6 +5,8 @@ import PersonIcon from '@mui/icons-material/Person';
 import { SwipeableDrawer } from "@mui/material";
 import  { useState } from "react";
 import { BookOnline } from "@mui/icons-material";
+import { useSelector } from 'react-redux';
+import { LoadingIcon } from "./LoadingIcon";
 
 
 const navList = [
@@ -22,6 +24,12 @@ const navList = [
 function MainLayout() {
   const location = useLocation() 
   const [toggle , toggleDrawer] = useState(false)
+
+
+  const network_status = useSelector(state => state.auth_reducer.network_status)
+  if(network_status.refresh === "pending") return <LoadingIcon/>
+
+
   return (
     <>
           <SwipeableDrawer

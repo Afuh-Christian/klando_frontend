@@ -17,15 +17,32 @@ if(routeParams){
       }
     }
 }
+
+
+const Appheaders = {
+    headers: {
+        'Content-Type': 'application/json'
+    
+    }
+}
+
+
+
 // Object.keys(routeParams)[0]}=${routeParams[Object.keys(routeParams)[0]]
     try {
         const response =
-            routeParams && postData ? await axios[httpMethod](`${mainRoute}${path}?${str}` , postData ) :
-            postData? await axios[httpMethod](`${mainRoute}${path}` , postData ) :
-            routeParams? await axios[httpMethod](`${mainRoute}${path}?${str}`) :
-            await axios[httpMethod](`${mainRoute}${path}`)
+            routeParams && postData ? await axios[httpMethod](`${mainRoute}${path}?${str}` , postData  , Appheaders) :
+            postData? await axios[httpMethod](`${mainRoute}${path}` , postData   , Appheaders) :
+            routeParams? await axios[httpMethod](`${mainRoute}${path}?${str}`  , Appheaders) :
+            await axios[httpMethod](`${mainRoute}${path}`  , Appheaders)
         return response
     }catch(err){
         return  {error_obj : err}
     }
 }
+
+
+
+
+
+

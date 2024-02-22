@@ -1,0 +1,136 @@
+{
+  "Actor": null,
+  "Audiences": ["https://localhost:7000"],
+  "Claims": [
+    {
+      "Issuer": "https://localhost:7000",
+      "OriginalIssuer": "https://localhost:7000",
+      "Properties": {},
+      "Subject": null,
+      "Type": "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier",
+      "Value": "a4418c06-8ed5-4967-959d-ce6c86af7297",
+      "ValueType": "http://www.w3.org/2001/XMLSchema#string",
+      "$type": "Claim"
+    },
+    {
+      "Issuer": "https://localhost:7000",
+      "OriginalIssuer": "https://localhost:7000",
+      "Properties": {},
+      "Subject": null,
+      "Type": "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name",
+      "Value": "afuh",
+      "ValueType": "http://www.w3.org/2001/XMLSchema#string",
+      "$type": "Claim"
+    },
+    {
+      "Issuer": "https://localhost:7000",
+      "OriginalIssuer": "https://localhost:7000",
+      "Properties": {},
+      "Subject": null,
+      "Type": "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress",
+      "Value": "afuh@gmail.com",
+      "ValueType": "http://www.w3.org/2001/XMLSchema#string",
+      "$type": "Claim"
+    },
+    {
+      "Issuer": "https://localhost:7000",
+      "OriginalIssuer": "https://localhost:7000",
+      "Properties": {},
+      "Subject": null,
+      "Type": "http://schemas.microsoft.com/ws/2008/06/identity/claims/role",
+      "Value": "System.Threading.Tasks.Task`1[System.String]",
+      "ValueType": "http://www.w3.org/2001/XMLSchema#string",
+      "$type": "Claim"
+    },
+    {
+      "Issuer": "https://localhost:7000",
+      "OriginalIssuer": "https://localhost:7000",
+      "Properties": {},
+      "Subject": null,
+      "Type": "exp",
+      "Value": "1708185256",
+      "ValueType": "http://www.w3.org/2001/XMLSchema#integer64",
+      "$type": "Claim"
+    },
+    {
+      "Issuer": "https://localhost:7000",
+      "OriginalIssuer": "https://localhost:7000",
+      "Properties": {},
+      "Subject": null,
+      "Type": "iss",
+      "Value": "https://localhost:7000",
+      "ValueType": "http://www.w3.org/2001/XMLSchema#string",
+      "$type": "Claim"
+    },
+    {
+      "Issuer": "https://localhost:7000",
+      "OriginalIssuer": "https://localhost:7000",
+      "Properties": {},
+      "Subject": null,
+      "Type": "aud",
+      "Value": "https://localhost:7000",
+      "ValueType": "http://www.w3.org/2001/XMLSchema#string",
+      "$type": "Claim"
+    }
+  ],
+  "EncodedHeader": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9",
+  "EncodedPayload": "eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6ImE0NDE4YzA2LThlZDUtNDk2Ny05NTlkLWNlNmM4NmFmNzI5NyIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJhZnVoIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvZW1haWxhZGRyZXNzIjoiYWZ1aEBnbWFpbC5jb20iLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJTeXN0ZW0uVGhyZWFkaW5nLlRhc2tzLlRhc2tgMVtTeXN0ZW0uU3RyaW5nXSIsImV4cCI6MTcwODE4NTI1NiwiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NzAwMCIsImF1ZCI6Imh0dHBzOi8vbG9jYWxob3N0OjcwMDAifQ",
+  "Header": [
+    { "Key": "alg", "Value": "HS256", "$type": "KeyValuePair`2" },
+    { "Key": "typ", "Value": "JWT", "$type": "KeyValuePair`2" }
+  ],
+  "Id": null,
+  "Issuer": "https://localhost:7000",
+  "Payload": [
+    {
+      "Key": "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier",
+      "Value": "a4418c06-8ed5-4967-959d-ce6c86af7297",
+      "$type": "KeyValuePair`2"
+    },
+    {
+      "Key": "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name",
+      "Value": "afuh",
+      "$type": "KeyValuePair`2"
+    },
+    {
+      "Key": "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress",
+      "Value": "afuh@gmail.com",
+      "$type": "KeyValuePair`2"
+    },
+    {
+      "Key": "http://schemas.microsoft.com/ws/2008/06/identity/claims/role",
+      "Value": "System.Threading.Tasks.Task`1[System.String]",
+      "$type": "KeyValuePair`2"
+    },
+    { "Key": "exp", "Value": 1708185256, "$type": "KeyValuePair`2" },
+    {
+      "Key": "iss",
+      "Value": "https://localhost:7000",
+      "$type": "KeyValuePair`2"
+    },
+    {
+      "Key": "aud",
+      "Value": "https://localhost:7000",
+      "$type": "KeyValuePair`2"
+    }
+  ],
+  "InnerToken": null,
+  "RawAuthenticationTag": null,
+  "RawCiphertext": null,
+  "RawData": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6ImE0NDE4YzA2LThlZDUtNDk2Ny05NTlkLWNlNmM4NmFmNzI5NyIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJhZnVoIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvZW1haWxhZGRyZXNzIjoiYWZ1aEBnbWFpbC5jb20iLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJTeXN0ZW0uVGhyZWFkaW5nLlRhc2tzLlRhc2tgMVtTeXN0ZW0uU3RyaW5nXSIsImV4cCI6MTcwODE4NTI1NiwiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NzAwMCIsImF1ZCI6Imh0dHBzOi8vbG9jYWxob3N0OjcwMDAifQ.s_r7zyWvj9E7gJ4bSWUkIsXvAeKZnrZEtzTnQQbrJ98",
+  "RawEncryptedKey": null,
+  "RawInitializationVector": null,
+  "RawHeader": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9",
+  "RawPayload": "eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6ImE0NDE4YzA2LThlZDUtNDk2Ny05NTlkLWNlNmM4NmFmNzI5NyIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJhZnVoIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvZW1haWxhZGRyZXNzIjoiYWZ1aEBnbWFpbC5jb20iLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJTeXN0ZW0uVGhyZWFkaW5nLlRhc2tzLlRhc2tgMVtTeXN0ZW0uU3RyaW5nXSIsImV4cCI6MTcwODE4NTI1NiwiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NzAwMCIsImF1ZCI6Imh0dHBzOi8vbG9jYWxob3N0OjcwMDAifQ",
+  "RawSignature": "s_r7zyWvj9E7gJ4bSWUkIsXvAeKZnrZEtzTnQQbrJ98",
+  "SecurityKey": null,
+  "SignatureAlgorithm": "HS256",
+  "SigningCredentials": null,
+  "EncryptingCredentials": null,
+  "SigningKey": null,
+  "Subject": null,
+  "ValidFrom": "0001-01-01T00:00:00.0000000",
+  "ValidTo": "2024-02-17T15:54:16.0000000Z",
+  "IssuedAt": "0001-01-01T00:00:00.0000000",
+  "$type": "JwtSecurityToken"
+}

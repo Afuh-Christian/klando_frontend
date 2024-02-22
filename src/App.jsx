@@ -18,20 +18,51 @@ import ClientsPage from './Pages/ClientsPage';
 import AccountPage from './Pages/AccountPage';
 import AvailableRides from './Pages/AvailableRides';
 import BookRide from './Pages/BookRide';
+import { useSelector } from 'react-redux';
+import { LoadingIcon } from './Utils/Components/LoadingIcon';
+import { useDispatch } from 'react-redux';
+import { useEffect, useRef } from 'react';
+import Cookies from 'js-cookie';
+
+import { RefreshUser, setEntry } from './ReduxStore/AuthSlice';
+
 
 
 function App() {
+ const entry =  useSelector(state => state.auth_reducer.entry)
+ const dispatch = useDispatch() 
+ const user_ = useSelector(state => state.auth_reducer.user_)
+ const network_status = useSelector(state => state.auth_reducer.network_status)
+ const runOnce = useRef(false)
+    useEffect(()=>{
+      // console.log(Cookies.get("clientKlandoRefreshToken"))
+      if(runOnce.current === false){
+        console.log(!user_?.refreshToken)
+        console.log(!([undefined , null ].includes(Cookies.get("clientKlandoRefreshToken"))))
+      if(!user_?.refreshToken && !([undefined , null ].includes(Cookies.get("clientKlandoRefreshToken")))){
+        console.log("dispatch functions") 
+        dispatch(RefreshUser({token: Cookies.get("clientKlandoRefreshToken")}))
+      }
+        return () => {
+          runOnce.current = true 
+         }
+      }
+    },[runOnce , user_?.refreshToken])
 
-  const user = 
-   null 
-  //  {name: "afuh"} 
-   ; 
+    useEffect(()=>{
+      if(network_status.refresh === "fulfilled" && user_.accessToken){
+         dispatch(setEntry(true))
+      }
+    } , [network_status.refresh])
+
+// if(network_status.refresh === "pending") return <LoadingIcon/>
+
   return (
     <> 
      <BrowserRouter basename = '/'>
       <Routes>
         {
-          user?.name ? 
+          entry  ? 
           <Route path='/' element={  <MainLayout />}>
           <Route index element={ <HomePage /> } />
           <Route path='clients' element={<ClientsPage />} />
@@ -41,7 +72,8 @@ function App() {
           {/* <Route path='products' element={<Products />} /> */}
           {/* <Route path='products/:productId' element={<SingleProduct />} /> */}
           {/* <Route path='*' element={<Error />} /> */}
-        </Route> : 
+        </Route>
+         : 
         <>
          <Route path='/' element = {<AppOpen/>}/>
          <Route  element = {<BackLayout/>}>

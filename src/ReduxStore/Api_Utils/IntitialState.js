@@ -3,6 +3,8 @@ export const initialStateDefault = {
     getData : null,
     status_code : "",
     network_status :  {
+        refresh:"" , 
+        userinfo: "" , 
         get: "",
         // get_: "",
         getDetail: "",

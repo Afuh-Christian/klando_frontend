@@ -4,6 +4,7 @@ import {  useLayoutEffect, useState } from "react"
 import FormGenerator from "../Utils/Components/FormGenerator";
 import { useFormik } from "formik";
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import Cookies from "js-cookie";
 
 
 const tabs = [
@@ -47,7 +48,6 @@ const Orders = [
 
 function DriverHomePage() {
     const [open , setOpen ] = useState(); 
-
     function handleModal () {
         setOpen(!open);
     }
@@ -58,7 +58,7 @@ function DriverHomePage() {
             setDimension({width: window.innerWidth, height: window.innerHeight })
         },[dimension.width,dimension.height])
 
-        console.log(dimension.height)
+        
 
     const [tab , setTab] = useState(0)
   return (
@@ -77,6 +77,7 @@ function DriverHomePage() {
         </div>
         <div className="py-5 w-full row-span-5 px-5 overflow-none grid grid-flow-row grid-rows-12">
            
+          
                  <div className="flex justify-between items-center gap-2 pb-4">
                     {
                         tabs.map(e => (
